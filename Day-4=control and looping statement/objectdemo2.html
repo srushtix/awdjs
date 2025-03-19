@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>object demo2</title>
+</head>
+<body>
+    <script>
+        let empdata={
+            name:"jeet",
+            jobrole:"s/w engg",
+            salary:80000,
+        }
+        for (let element in empdata)
+        {
+            console.log(empdata[element]);
+        }
+        empdata.city="mumbai"
+        for (let element in empdata)
+        {
+            console.log(empdata[element]);
+        }
+        // let colors={}
+        // console.log(colors);
+        // colors.first="red"
+        // colors.second="green"
+        // console.log(colors);
+        console.log("adding data keys as function");
+        empdata.data=function()
+        {
+            return this.name+""+this.salary
+        }
+        console.log(empdata.data())
+    </script>
+</body>
+</html>
